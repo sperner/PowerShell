@@ -1,0 +1,49 @@
+Unix-CMD	PowerShell-CMD		Example							PS-Alias
+------------------------------------------------------------------------------------------
+alias		set-alias			set-alias which get-command		
+awk				???
+cat			get-content			get-content foo.asm				cat
+cd			set-location		set-location \					cd
+clear		clear-host			clear-host						clear
+cp			copy-item			copy-item foo.bin bar.bin		cp
+date		get-date			get-date						date
+df			get-psdrive			get-psdrive						
+diff		compare-object		compare-object foo.txt bar.txt	diff
+du				[script counting sizes]
+echo		write-output		write-output hello world		echo
+env			get-childitem env:									
+file			[script with HKEY_CLASSES_ROOT]
+find		get-childitem .|where {$_.name -match "foo"}		
+free			[script with WMI OperatingSystem & PageFileUsage]
+grep		where				|where {$_ -match "foo*"}		
+head		select -first		|select -first 20				
+kill		stop-process		stop-process 11880				kill
+ls			get-childitem		get-childitem folder			ls
+lt			Get-ChildItem | Sort-Object LastWriteTime			
+lz			Get-ChildItem | Sort-Object Length					
+man			get-help			get-help for					man
+mkdir		new-item			new-item folder					mkdir
+more		more				|more							
+mv			move-item			move-item old\foo new\foo		mv
+popd		pop-location		pop-location					popd
+pushd		push-location		push-location					pushd
+ps			get-process			get-process						ps
+pwd			get-location		get-location					pwd
+rc			get-service			get-service						
+repeat			[script with loop]
+rm			remove-item			remove-item foo.old				rm
+rmdir		remove-item			remove-item folder				rmdir
+sed			-replace			|%{$_ -replace "expr", "repl"}
+sort		sort-object			|sort-object name				sort
+tail		select -last		|select -last 20				
+tee			tee-object			|tee-object -file foo.log		tee
+time		measure-command		measure-command {}				
+top				[script with Win32_Process & SetCursor]
+touch		new-item			new-item foo.file				
+uname		[System.Environment]::OSVersion
+uptime			[script with WMI OperatingSystem]
+wc			measure-object		|measure-object -character -word -line	
+wget			[script with .Net HttpWebRequest]				
+which		get-command			get-command ps					
+who				[script with WMI ComputerSystem]
+whois			[script with New-WebServiceProxy]
